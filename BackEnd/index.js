@@ -55,7 +55,7 @@ app.delete("/cars/:id", async (req, res) => {
 });
 
 mongoose
-  .connect("mongodb+srv://mirzarmaf206:mirze2005@mirzoo.xto5c.mongodb.net/")
+  .connect(process.env.ConnectionString)
   .then(() => {
     console.log("connected");
   });
